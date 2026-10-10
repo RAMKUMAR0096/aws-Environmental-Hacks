@@ -1,0 +1,994 @@
+[
+  {
+    "segmentId": "vel-01",
+    "name": "Ram Nagar (North) Main Road",
+    "area": "Velachery",
+    "geometry": [
+      [
+        80.218685,
+        12.976406
+      ],
+      [
+        80.2195,
+        12.9772
+      ],
+      [
+        80.220315,
+        12.977994
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9772,
+      "lng": 80.2195
+    },
+    "elevationM": 9,
+    "elevationNorm": 0.652,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Cyclone Michaung: Velachery Ram Nagar among worst hit with chest-deep water",
+      "url": "https://www.thehindu.com/news/cities/chennai/cyclone-michaung-inundation-points",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "vel-02",
+    "name": "Vijaya Nagar Junction / Bus Stand",
+    "area": "Velachery",
+    "geometry": [
+      [
+        80.2217,
+        12.979477
+      ],
+      [
+        80.2217,
+        12.9806
+      ],
+      [
+        80.2217,
+        12.981723
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9806,
+      "lng": 80.2217
+    },
+    "elevationM": 10,
+    "elevationNorm": 0.609,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Key arterial junction submerged as Velachery lake surplus floods Vijayanagar",
+      "url": "https://www.thehindu.com/news/cities/chennai/velachery-inundation-after-heavy-rain",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "vel-03",
+    "name": "Five Furlong Road",
+    "area": "Velachery",
+    "geometry": [
+      [
+        80.217298,
+        12.992839
+      ],
+      [
+        80.2163,
+        12.9934
+      ],
+      [
+        80.215302,
+        12.993961
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9934,
+      "lng": 80.2163
+    },
+    "elevationM": 13,
+    "elevationNorm": 0.478,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Guindy-Velachery link on Five Furlong Road closed due to deep waterlogging",
+      "url": "https://indianexpress.com/article/cities/chennai/chennai-rains-live-updates-cyclone-michaung",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "vel-04",
+    "name": "AGS Colony 4th Main Road",
+    "area": "Velachery",
+    "geometry": [
+      [
+        80.211648,
+        12.9862
+      ],
+      [
+        80.2128,
+        12.9862
+      ],
+      [
+        80.213952,
+        12.9862
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9862,
+      "lng": 80.2128
+    },
+    "elevationM": 8,
+    "elevationNorm": 0.696,
+    "historyFlag": true,
+    "historySource": {
+      "title": "AGS Colony inundated; boats deployed for rescuing stranded senior citizens",
+      "url": "https://www.thehindu.com/news/cities/chennai/boats-deployed-velachery-rescue",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "vel-05",
+    "name": "VGP Selva Nagar Main Road",
+    "area": "Velachery",
+    "geometry": [
+      [
+        80.216302,
+        12.975361
+      ],
+      [
+        80.2173,
+        12.9748
+      ],
+      [
+        80.218298,
+        12.974239
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9748,
+      "lng": 80.2173
+    },
+    "elevationM": 8,
+    "elevationNorm": 0.696,
+    "historyFlag": true,
+    "historySource": {
+      "title": "VGP Selva Nagar cut off as water level stagnates for four days",
+      "url": "https://www.thehindu.com/news/cities/chennai/south-chennai-submerged-michaung",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "vel-06",
+    "name": "Tansi Nagar 13th Street",
+    "area": "Velachery",
+    "geometry": [
+      [
+        80.2239,
+        12.982794
+      ],
+      [
+        80.2241,
+        12.9839
+      ],
+      [
+        80.2243,
+        12.985006
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9839,
+      "lng": 80.2241
+    },
+    "elevationM": 14,
+    "elevationNorm": 0.435,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Tansi Nagar residents battle severe waterlogging near MRTS canal",
+      "url": "https://www.thenewsminute.com/tamil-nadu/cyclone-michaung-chennai-floods-ground-report",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "vel-07",
+    "name": "Murugan Nagar Main Road",
+    "area": "Velachery",
+    "geometry": [
+      [
+        80.217765,
+        12.989005
+      ],
+      [
+        80.2189,
+        12.9892
+      ],
+      [
+        80.220035,
+        12.989395
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9892,
+      "lng": 80.2189
+    },
+    "elevationM": 13,
+    "elevationNorm": 0.478,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Murugan Nagar waterlogging caused by missing stormwater drain link",
+      "url": "https://www.thehindu.com/news/cities/chennai/waterlogging-velachery-wards",
+      "year": 2021
+    }
+  },
+  {
+    "segmentId": "vel-08",
+    "name": "Velachery Bypass Road (Phoenix stretch)",
+    "area": "Velachery",
+    "geometry": [
+      [
+        80.2172,
+        12.990094
+      ],
+      [
+        80.217,
+        12.9912
+      ],
+      [
+        80.2168,
+        12.992306
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9912,
+      "lng": 80.217
+    },
+    "elevationM": 6,
+    "elevationNorm": 0.783,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Traffic paralyzed on Velachery Bypass as flood water gushes onto road",
+      "url": "https://indianexpress.com/article/cities/chennai/traffic-advisory-chennai-floods",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "pal-01",
+    "name": "Kamakoti Nagar Main Road",
+    "area": "Pallikaranai",
+    "geometry": [
+      [
+        80.213985,
+        12.942306
+      ],
+      [
+        80.2148,
+        12.9431
+      ],
+      [
+        80.215615,
+        12.943894
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9431,
+      "lng": 80.2148
+    },
+    "elevationM": 3,
+    "elevationNorm": 0.913,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Narayanapuram lake surplus inundates Kamakoti Nagar, Pallikaranai",
+      "url": "https://www.thehindu.com/news/cities/chennai/pallikaranai-narayanapuram-lake-breach",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "pal-02",
+    "name": "Rajesh Nagar 1st Main Road",
+    "area": "Pallikaranai",
+    "geometry": [
+      [
+        80.210848,
+        12.9465
+      ],
+      [
+        80.212,
+        12.9465
+      ],
+      [
+        80.213152,
+        12.9465
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9465,
+      "lng": 80.212
+    },
+    "elevationM": 7,
+    "elevationNorm": 0.739,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Rajesh Nagar streets submerge under knee-deep marsh runoff",
+      "url": "https://www.newindianexpress.com/cities/chennai/2023/Dec/06/pallikaranai-inundated-residents-appeal-for-food-rescue",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "pal-03",
+    "name": "Velachery-Tambaram Road (Narayanapuram Lake stretch)",
+    "area": "Pallikaranai",
+    "geometry": [
+      [
+        80.215924,
+        12.947828
+      ],
+      [
+        80.2165,
+        12.9488
+      ],
+      [
+        80.217076,
+        12.949772
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9488,
+      "lng": 80.2165
+    },
+    "elevationM": 3,
+    "elevationNorm": 0.913,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Velachery-Tambaram Road closed near Narayanapuram lake surplus weir",
+      "url": "https://www.thehindu.com/news/cities/chennai/arterial-roads-inundated-chennai",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "pal-04",
+    "name": "Oil Mill Road",
+    "area": "Pallikaranai",
+    "geometry": [
+      [
+        80.207117,
+        12.939884
+      ],
+      [
+        80.2082,
+        12.9395
+      ],
+      [
+        80.209283,
+        12.939116
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9395,
+      "lng": 80.2082
+    },
+    "elevationM": 8,
+    "elevationNorm": 0.696,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Water stagnation in low-lying Oil Mill Road, Pallikaranai",
+      "url": "https://www.thehindu.com/news/cities/chennai/swd-work-pallikaranai-delays",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "pal-05",
+    "name": "Maxworth Nagar",
+    "area": "Pallikaranai",
+    "geometry": [
+      [
+        80.218717,
+        12.940816
+      ],
+      [
+        80.2198,
+        12.9412
+      ],
+      [
+        80.220883,
+        12.941584
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9412,
+      "lng": 80.2198
+    },
+    "elevationM": 2,
+    "elevationNorm": 0.957,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Maxworth Nagar flooded as marsh water level rises past flood marks",
+      "url": "https://citizenmatters.in/chennai-floods-pallikaranai-marsh-encroachments-impact",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "pal-06",
+    "name": "Jerusalem College Road (Link Road)",
+    "area": "Pallikaranai",
+    "geometry": [
+      [
+        80.227839,
+        12.94428
+      ],
+      [
+        80.2285,
+        12.9452
+      ],
+      [
+        80.229161,
+        12.94612
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9452,
+      "lng": 80.2285
+    },
+    "elevationM": 1,
+    "elevationNorm": 1,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Pallikaranai to Thoraipakkam radial link flooded near college stretch",
+      "url": "https://www.thehindu.com/news/cities/chennai/radial-road-flooding-chennai",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "pal-07",
+    "name": "Balaji Dental College Stretch",
+    "area": "Pallikaranai",
+    "geometry": [
+      [
+        80.215106,
+        12.936745
+      ],
+      [
+        80.2155,
+        12.9378
+      ],
+      [
+        80.215894,
+        12.938855
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9378,
+      "lng": 80.2155
+    },
+    "elevationM": 5,
+    "elevationNorm": 0.826,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Severe water accumulation near Balaji Dental College along arterial highway",
+      "url": "https://indianexpress.com/article/cities/chennai/south-chennai-traffic-waterlogging",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "pal-08",
+    "name": "Jalladianpet Main Road",
+    "area": "Pallikaranai",
+    "geometry": [
+      [
+        80.208365,
+        12.932305
+      ],
+      [
+        80.2095,
+        12.9325
+      ],
+      [
+        80.210635,
+        12.932695
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9325,
+      "lng": 80.2095
+    },
+    "elevationM": 11,
+    "elevationNorm": 0.565,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Jalladianpet low-lying street inundated as surplus drain overflows",
+      "url": "https://www.newindianexpress.com/cities/chennai/2023/Dec/07/waterlogging-persists-in-jalladianpet",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "mud-01",
+    "name": "Amudan Nagar Main Road",
+    "area": "Mudichur",
+    "geometry": [
+      [
+        80.067459,
+        12.91634
+      ],
+      [
+        80.0682,
+        12.9172
+      ],
+      [
+        80.068941,
+        12.91806
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9172,
+      "lng": 80.0682
+    },
+    "elevationM": 20,
+    "elevationNorm": 0.174,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Mudichur Amudan Nagar inundated with 4-ft water during Adyar overflow",
+      "url": "https://www.thehindu.com/news/cities/chennai/mudichur-flooding-cyclone-nivar-michaung",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "mud-02",
+    "name": "Varadarajapuram Link Road",
+    "area": "Mudichur",
+    "geometry": [
+      [
+        80.058087,
+        12.921209
+      ],
+      [
+        80.0592,
+        12.9215
+      ],
+      [
+        80.060313,
+        12.921791
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9215,
+      "lng": 80.0592
+    },
+    "elevationM": 17,
+    "elevationNorm": 0.304,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Varadarajapuram and Mudichur hit hard as Adyar river swells",
+      "url": "https://www.thehindu.com/news/cities/chennai/varadarajapuram-mudichur-submerged",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "mud-03",
+    "name": "Mahalakshmi Nagar 1st Main Road",
+    "area": "Mudichur",
+    "geometry": [
+      [
+        80.0713,
+        12.912894
+      ],
+      [
+        80.0715,
+        12.914
+      ],
+      [
+        80.0717,
+        12.915106
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.914,
+      "lng": 80.0715
+    },
+    "elevationM": 20,
+    "elevationNorm": 0.174,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Mahalakshmi Nagar under waist-deep water; NDRF assists relief work",
+      "url": "https://indianexpress.com/article/cities/chennai/ndrf-mudichur-flood-rescue-operation",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "mud-04",
+    "name": "Mudichur Main Road (Manimangalam Koot Road)",
+    "area": "Mudichur",
+    "geometry": [
+      [
+        80.063556,
+        12.924156
+      ],
+      [
+        80.0645,
+        12.9248
+      ],
+      [
+        80.065444,
+        12.925444
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9248,
+      "lng": 80.0645
+    },
+    "elevationM": 17,
+    "elevationNorm": 0.304,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Mudichur Road completely cut off from Tambaram due to gushing flood water",
+      "url": "https://www.thehindu.com/news/cities/chennai/mudichur-road-traffic-suspended",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "mud-05",
+    "name": "Bhuvaneshwari Nagar",
+    "area": "Mudichur",
+    "geometry": [
+      [
+        80.072348,
+        12.9115
+      ],
+      [
+        80.0735,
+        12.9115
+      ],
+      [
+        80.074652,
+        12.9115
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9115,
+      "lng": 80.0735
+    },
+    "elevationM": 20,
+    "elevationNorm": 0.174,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Bhuvaneshwari Nagar remains one of Mudichur's most chronic flood spots",
+      "url": "https://www.thehindu.com/news/cities/chennai/mudichur-residents-permanent-flood-remedy",
+      "year": 2021
+    }
+  },
+  {
+    "segmentId": "mud-06",
+    "name": "Shanti Niketan Nagar",
+    "area": "Mudichur",
+    "geometry": [
+      [
+        80.064424,
+        12.918028
+      ],
+      [
+        80.065,
+        12.919
+      ],
+      [
+        80.065576,
+        12.919972
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.919,
+      "lng": 80.065
+    },
+    "elevationM": 17,
+    "elevationNorm": 0.304,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Shanti Niketan Nagar residents marooned as surplus canal breaches",
+      "url": "https://indianexpress.com/article/cities/chennai/chennai-floods-ground-report-mudichur",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "mud-07",
+    "name": "Shastri Nagar Street",
+    "area": "Mudichur",
+    "geometry": [
+      [
+        80.068665,
+        12.915605
+      ],
+      [
+        80.0698,
+        12.9158
+      ],
+      [
+        80.070935,
+        12.915995
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9158,
+      "lng": 80.0698
+    },
+    "elevationM": 20,
+    "elevationNorm": 0.174,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Boat rescue operations in Shastri Nagar after 200mm overnight deluge",
+      "url": "https://www.thehindu.com/news/cities/chennai/boat-rescues-mudichur-tambaram",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "mud-08",
+    "name": "Rayappa Nagar",
+    "area": "Mudichur",
+    "geometry": [
+      [
+        80.074917,
+        12.923384
+      ],
+      [
+        80.076,
+        12.923
+      ],
+      [
+        80.077083,
+        12.922616
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.923,
+      "lng": 80.076
+    },
+    "elevationM": 16,
+    "elevationNorm": 0.348,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Rayappa Nagar inundation cuts off local movement to Tambaram railway station",
+      "url": "https://www.thehindu.com/news/cities/chennai/tambaram-suburbs-waterlogging",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "med-01",
+    "name": "Sri Sathya Sai Nagar Main Road",
+    "area": "Medavakkam",
+    "geometry": [
+      [
+        80.187685,
+        12.923406
+      ],
+      [
+        80.1885,
+        12.9242
+      ],
+      [
+        80.189315,
+        12.924994
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9242,
+      "lng": 80.1885
+    },
+    "elevationM": 15,
+    "elevationNorm": 0.391,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Sitheri lake bund breach causes flooding in Sri Sathya Sai Nagar",
+      "url": "https://www.newindianexpress.com/cities/chennai/2023/Dec/08/medavakkam-sitheri-breach-floods-homes",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "med-02",
+    "name": "Medavakkam Periya Eri Lake Road",
+    "area": "Medavakkam",
+    "geometry": [
+      [
+        80.1918,
+        12.917394
+      ],
+      [
+        80.192,
+        12.9185
+      ],
+      [
+        80.1922,
+        12.919606
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9185,
+      "lng": 80.192
+    },
+    "elevationM": 24,
+    "elevationNorm": 0,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Medavakkam Periya Eri overflows onto lake road entering adjoining houses",
+      "url": "https://www.thehindu.com/news/cities/chennai/medavakkam-periya-eri-overflow",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "med-03",
+    "name": "Jaya Nagar 2nd Street",
+    "area": "Medavakkam",
+    "geometry": [
+      [
+        80.184065,
+        12.926605
+      ],
+      [
+        80.1852,
+        12.9268
+      ],
+      [
+        80.186335,
+        12.926995
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9268,
+      "lng": 80.1852
+    },
+    "elevationM": 7,
+    "elevationNorm": 0.739,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Jaya Nagar inundation blamed on incomplete drain connecting to marsh",
+      "url": "https://www.thehindu.com/news/cities/chennai/missing-drain-links-medavakkam",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "med-04",
+    "name": "Surya Nagar Main Road",
+    "area": "Medavakkam",
+    "geometry": [
+      [
+        80.186424,
+        12.928528
+      ],
+      [
+        80.187,
+        12.9295
+      ],
+      [
+        80.187576,
+        12.930472
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9295,
+      "lng": 80.187
+    },
+    "elevationM": 6,
+    "elevationNorm": 0.783,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Residents in Surya Nagar, Medavakkam wade through knee-deep stagnant water",
+      "url": "https://www.thehindu.com/news/cities/chennai/surya-nagar-water-stagnation",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "med-05",
+    "name": "Vadakkupattu Main Road",
+    "area": "Medavakkam",
+    "geometry": [
+      [
+        80.181348,
+        12.9135
+      ],
+      [
+        80.1825,
+        12.9135
+      ],
+      [
+        80.183652,
+        12.9135
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9135,
+      "lng": 80.1825
+    },
+    "elevationM": 13,
+    "elevationNorm": 0.478,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Vadakkupattu Road waterlogged; vehicles stranded at Medavakkam link",
+      "url": "https://indianexpress.com/article/cities/chennai/chennai-rains-suburban-roads-waterlogged",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "med-06",
+    "name": "Perumbakkam Main Road Junction",
+    "area": "Medavakkam",
+    "geometry": [
+      [
+        80.198502,
+        12.919239
+      ],
+      [
+        80.1995,
+        12.9198
+      ],
+      [
+        80.200498,
+        12.920361
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.9198,
+      "lng": 80.1995
+    },
+    "elevationM": 14,
+    "elevationNorm": 0.435,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Perumbakkam junction submerged under two feet of water near flyover",
+      "url": "https://www.thehindu.com/news/cities/chennai/medavakkam-junction-flyover-flooding",
+      "year": 2023
+    }
+  },
+  {
+    "segmentId": "med-07",
+    "name": "Thiruvalluvar Street",
+    "area": "Medavakkam",
+    "geometry": [
+      [
+        80.188802,
+        12.922561
+      ],
+      [
+        80.1898,
+        12.922
+      ],
+      [
+        80.190798,
+        12.921439
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.922,
+      "lng": 80.1898
+    },
+    "elevationM": 20,
+    "elevationNorm": 0.174,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Thiruvalluvar Street experiences perennial monsoon inundation",
+      "url": "https://www.thehindu.com/news/cities/chennai/medavakkam-civic-issues-inundation",
+      "year": 2022
+    }
+  },
+  {
+    "segmentId": "med-08",
+    "name": "Babu Nagar Main Road",
+    "area": "Medavakkam",
+    "geometry": [
+      [
+        80.194202,
+        12.926915
+      ],
+      [
+        80.1945,
+        12.928
+      ],
+      [
+        80.194798,
+        12.929085
+      ]
+    ],
+    "midpoint": {
+      "lat": 12.928,
+      "lng": 80.1945
+    },
+    "elevationM": 13,
+    "elevationNorm": 0.478,
+    "historyFlag": true,
+    "historySource": {
+      "title": "Babu Nagar residents complain of stagnant flood water and sewage overflow",
+      "url": "https://www.newindianexpress.com/cities/chennai/2023/Dec/09/medavakkam-residents-struggle-with-waterlogging",
+      "year": 2023
+    }
+  }
+]
