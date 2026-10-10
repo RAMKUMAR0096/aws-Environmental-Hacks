@@ -1,0 +1,334 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Chennai Flood Pulse - Serverless Backend
+  Street-level flood risk for next 3 hours & safe routing for Chennai pilot zone.
+
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 512
+    Runtime: nodejs20.x
+    Architectures:
+      - x86_64
+    Environment:
+      Variables:
+        NODE_OPTIONS: "--enable-source-maps"
+        DYNAMODB_SEGMENTS_TABLE: !Ref SegmentsTable
+        DYNAMODB_RISK_TABLE: !Ref RiskTable
+        DYNAMODB_REPORTS_TABLE: !Ref ReportsTable
+        DYNAMODB_SUBSCRIPTIONS_TABLE: !Ref SubscriptionsTable
+        DYNAMODB_RISK_HISTORY_TABLE: !Ref RiskHistoryTable
+        REPORTS_S3_BUCKET: !Ref ReportsBucket
+        SNS_ALERTS_TOPIC_ARN: !Ref AreaAlertsTopic
+        BEDROCK_MODEL_ID: "anthropic.claude-3-haiku-20240307-v1:0"
+
+Resources:
+  # ==========================================
+  # DynamoDB Tables (On-Demand billing)
+  # ==========================================
+  SegmentsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ChennaiFloodPulse-Segments
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: segmentId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: segmentId
+          KeyType: HASH
+
+  RiskTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ChennaiFloodPulse-Risk
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: segmentId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: segmentId
+          KeyType: HASH
+
+  ReportsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ChennaiFloodPulse-Reports
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: reportId
+          AttributeType: S
+        - AttributeName: area
+          AttributeType: S
+        - AttributeName: createdAt
+          AttributeType: S
+      KeySchema:
+        - AttributeName: reportId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: byArea
+          KeySchema:
+            - AttributeName: area
+              KeyType: HASH
+            - AttributeName: createdAt
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+
+  SubscriptionsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ChennaiFloodPulse-Subscriptions
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: email
+          AttributeType: S
+        - AttributeName: area
+          AttributeType: S
+      KeySchema:
+        - AttributeName: email
+          KeyType: HASH
+        - AttributeName: area
+          KeyType: RANGE
+
+  RiskHistoryTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ChennaiFloodPulse-RiskHistory
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: segmentId
+          AttributeType: S
+        - AttributeName: ts
+          AttributeType: S
+      KeySchema:
+        - AttributeName: segmentId
+          KeyType: HASH
+        - AttributeName: ts
+          KeyType: RANGE
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+
+  # ==========================================
+  # S3 Bucket for Flood Photos
+  # ==========================================
+  ReportsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "chennai-flood-pulse-photos-${AWS::AccountId}-${AWS::Region}"
+      LifecycleConfiguration:
+        Rules:
+          - Id: AutoDeleteAfter30Days
+            Status: Enabled
+            ExpirationInDays: 30
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - PUT
+              - GET
+            AllowedOrigins:
+              - '*'
+            MaxAge: 3600
+
+  # ==========================================
+  # Amazon SNS Topic for Area Alerts
+  # ==========================================
+  AreaAlertsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: ChennaiFloodPulse-AreaAlerts
+      DisplayName: "Chennai Flood Pulse Alerts"
+
+  # ==========================================
+  # API Gateway (HTTP API)
+  # ==========================================
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins:
+          - "http://localhost:3000"
+          - "https://*.amplifyapp.com"
+          - "*"
+        AllowHeaders:
+          - "Content-Type"
+          - "Authorization"
+        AllowMethods:
+          - "GET"
+          - "POST"
+          - "OPTIONS"
+        MaxAge: 600
+
+  # ==========================================
+  # Lambda Functions
+  # ==========================================
+  ComputeRiskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist
+      Handler: handlers/computeRisk.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SegmentsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref RiskTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ReportsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref RiskHistoryTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref SubscriptionsTable
+        - SNSPublishMessagePolicy:
+            TopicName: !GetAtt AreaAlertsTopic.TopicName
+      Events:
+        ScheduledRiskUpdate:
+          Type: ScheduleV2
+          Properties:
+            ScheduleExpression: "rate(15 minutes)"
+            Description: "Trigger flood risk calculation every 15 minutes"
+
+  GetRiskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist
+      Handler: handlers/getRisk.handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref SegmentsTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref RiskTable
+      Events:
+        GetAllRisk:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /risk
+            Method: GET
+        GetSingleRisk:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /risk/{segmentId}
+            Method: GET
+
+  GetRouteFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist
+      Handler: handlers/getRoute.handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref SegmentsTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref RiskTable
+      Events:
+        PostRoute:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /route
+            Method: POST
+
+  GetUploadUrlFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist
+      Handler: handlers/getUploadUrl.handler
+      Policies:
+        - S3WritePolicy:
+            BucketName: !Ref ReportsBucket
+      Events:
+        PostUploadUrl:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /reports/upload-url
+            Method: POST
+
+  PostReportFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist
+      Handler: handlers/postReport.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ReportsTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref SegmentsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref RiskTable
+        - S3ReadPolicy:
+            BucketName: !Ref ReportsBucket
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+              Resource: "*"
+      Events:
+        PostReport:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /report
+            Method: POST
+
+  GetHotspotsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist
+      Handler: handlers/getHotspots.handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref SegmentsTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref RiskTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref ReportsTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref RiskHistoryTable
+      Events:
+        GetHotspots:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /hotspots
+            Method: GET
+
+  SubscribeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist
+      Handler: handlers/subscribe.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SubscriptionsTable
+        - Statement:
+            - Effect: Allow
+              Action:
+                - sns:Subscribe
+              Resource: !Ref AreaAlertsTopic
+      Events:
+        PostSubscribe:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /subscribe
+            Method: POST
+
+Outputs:
+  ApiEndpoint:
+    Description: "HTTP API Gateway endpoint URL"
+    Value: !Sub "https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+  ReportsBucketName:
+    Description: "S3 Bucket for citizen photo uploads"
+    Value: !Ref ReportsBucket
+  AreaAlertsTopicArn:
+    Description: "SNS Topic ARN for area email flood alerts"
+    Value: !Ref AreaAlertsTopic
