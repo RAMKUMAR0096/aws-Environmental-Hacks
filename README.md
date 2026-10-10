@@ -259,12 +259,6 @@ npm run seed
 
 ---
 
-## 11. Disclosure
-
-This project was built using **Google Antigravity** as an AI pair-programming assistant.
-
----
-
 ## 12. License
 
 MIT License. See [LICENSE](LICENSE) for details.
