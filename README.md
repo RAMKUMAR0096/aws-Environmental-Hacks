@@ -259,6 +259,6 @@ npm run seed
 
 ---
 
-## 12. License
+## 11. License
 
 MIT License. See [LICENSE](LICENSE) for details.
