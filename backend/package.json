@@ -8,7 +8,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "dev": "tsx src/devServer.ts",
-    "seed": "tsx ../scripts/seed-dynamodb.ts"
+    "seed": "tsx src/seed.ts"
   },
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.758.0",

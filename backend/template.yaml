@@ -154,8 +154,6 @@ Resources:
     Properties:
       CorsConfiguration:
         AllowOrigins:
-          - "http://localhost:3000"
-          - "https://*.amplifyapp.com"
           - "*"
         AllowHeaders:
           - "Content-Type"

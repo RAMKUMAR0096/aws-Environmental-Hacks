@@ -241,7 +241,7 @@ npm run seed
 ### Deploy Frontend (AWS Amplify)
 1. Connect the GitHub repository to the AWS Amplify Console.
 2. Add environment variables:
-   - `NEXT_PUBLIC_API_BASE_URL`: (Your SAM HTTP API Gateway URL)
+   - `NEXT_PUBLIC_API_BASE_URL`: `https://oaa12bg8le.execute-api.ap-south-1.amazonaws.com`
    - `NEXT_PUBLIC_MAP_STYLE_URL`: (Amazon Location Service map style URL or Carto Dark Matter style)
    - `NEXT_PUBLIC_REGION`: `ap-south-1`
 3. Deploy!
