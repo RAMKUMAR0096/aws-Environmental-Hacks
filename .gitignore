@@ -33,3 +33,8 @@ Thumbs.db
 dist/
 build/
 *.tsbuildinfo
+
+# Internal planning & submission drafts
+HUMAN_TODO.md
+DEMO_SCRIPT.md
+BLOG_DRAFT.md
