@@ -3,15 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd frontend
-        - echo "NEXT_PUBLIC_API_BASE_URL=https://oaa12bg8le.execute-api.ap-south-1.amazonaws.com" >> .env.production
-        - echo "NEXT_PUBLIC_REGION=ap-south-1" >> .env.production
-        - echo "NEXT_PUBLIC_MAP_STYLE_URL=https://demotiles.maplibre.org/style.json" >> .env.production
-        - npm ci
+        - cd frontend && npm ci
     build:
       commands:
-        - cd frontend
-        - npm run build
+        - cd frontend && npm run build
   artifacts:
     baseDirectory: frontend/out
     files:

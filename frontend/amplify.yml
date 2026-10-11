@@ -3,9 +3,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "NEXT_PUBLIC_API_BASE_URL=https://oaa12bg8le.execute-api.ap-south-1.amazonaws.com" >> .env.production
-        - echo "NEXT_PUBLIC_REGION=ap-south-1" >> .env.production
-        - echo "NEXT_PUBLIC_MAP_STYLE_URL=https://demotiles.maplibre.org/style.json" >> .env.production
         - npm ci
     build:
       commands:
