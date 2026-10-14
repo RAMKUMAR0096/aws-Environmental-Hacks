@@ -9,7 +9,7 @@
 
 **Hackathon:** Environmental Hacks (WeMakeDevs x AWS, Bharat Builds Tour event 02)  
 **Track:** Heat and Water  
-**Live Demo:** [https://main.d123456789.amplifyapp.com](https://main.d123456789.amplifyapp.com) *(Configure with your AWS Amplify App URL)*
+**Live Demo:** [[https://main.d123456789.amplifyapp.com](https://main.d2u5xebzknb4wl.amplifyapp.com/)]
 
 ---
 
